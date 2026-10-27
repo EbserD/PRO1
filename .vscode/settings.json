@@ -1,0 +1,21 @@
+{
+  "workbench.colorTheme": "Visual Studio Dark",
+  "workbench.preferredDarkColorTheme": "Visual Studio Dark",
+  "workbench.iconTheme": "vscode-icons",
+  "editor.rulers": [
+    80,
+    120
+  ],
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "files.exclude": {
+    "**/*.exe": true,
+    "**/*.o": true,
+    "**/*.ppu": true
+  },
+  "pascal.formatter.engine": "ptop",
+  "pascal.formatter.enginePath": "C:\\FPC\\3.2.2\\bin\\i386-win32\\ptop.exe",
+  "pascal.formatter.engineParameters": "C:\\FPC\\3.2.2\\bin\\i386-win32\\ptop.cfg",
+  "pascal.format.indent": 2,
+  "pascal.format.wrapLineLength": 80,
+}

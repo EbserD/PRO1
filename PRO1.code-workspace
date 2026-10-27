@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"extensions": {
+		"recommendations": [
+			"alefragnani.pascal",
+			"alefragnani.pascal-formatter",
+			"vscode-icons-team.vscode-icons",
+			"iulian-radu-at.vscode-tasks-sidebar"
+		]
+	}
+}
