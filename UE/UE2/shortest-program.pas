@@ -1,4 +1,0 @@
-
-PROGRAM ShortestProgram;
-BEGIN
-END.
