@@ -4,6 +4,7 @@ INTERFACE
   
   FUNCTION Factorial(x: INTEGER): REAL;
   FUNCTION Binomial(x, y: INTEGER): LONGINT;
+  FUNCTION Max(arr: ARRAY OF INTEGER): INTEGER;
 
 IMPLEMENTATION
 
@@ -24,6 +25,18 @@ IMPLEMENTATION
     Binomial := Round(Factorial(x) / (Factorial(y) * Factorial(x-y)));
   END; (* Binomial *)
   
+  FUNCTION Max(arr: ARRAY OF INTEGER): INTEGER;
+  VAR
+    maxValue, i: INTEGER;
+  BEGIN (* Max *)
+    maxValue := arr[0];
+    FOR i := 1 TO length(arr) - 1 DO BEGIN
+      IF (arr[i] > maxValue) THEN BEGIN
+        maxValue := arr[i];
+      END; (* IF *)
+    END; (* FOR *)
+    Max := maxValue;
+  END; (* Max *)
 
 BEGIN (* mathUtils *)
   
