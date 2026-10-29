@@ -2,11 +2,17 @@ UNIT mathUtils;
 
 INTERFACE
   
-  FUNCTION Factorial(x: INTEGER): REAL;
   FUNCTION Binomial(x, y: INTEGER): LONGINT;
-  FUNCTION Max(arr: ARRAY OF INTEGER): INTEGER;
+  FUNCTION Factorial(x: INTEGER): REAL;
+  FUNCTION Max(arr: ARRAY OF REAL): REAL;
+  FUNCTION Min(arr: ARRAY OF REAL): REAL;
 
 IMPLEMENTATION
+
+  FUNCTION Binomial(x, y: INTEGER): LONGINT;
+  BEGIN (* Binomial *)
+    Binomial := Round(Factorial(x) / (Factorial(y) * Factorial(x-y)));
+  END; (* Binomial *)
 
   FUNCTION Factorial(x: INTEGER): REAL;
     VAR
@@ -20,14 +26,10 @@ IMPLEMENTATION
     Factorial := res;
   END; (* Factorial *)
 
-  FUNCTION Binomial(x, y: INTEGER): LONGINT;
-  BEGIN (* Binomial *)
-    Binomial := Round(Factorial(x) / (Factorial(y) * Factorial(x-y)));
-  END; (* Binomial *)
-  
-  FUNCTION Max(arr: ARRAY OF INTEGER): INTEGER;
-  VAR
-    maxValue, i: INTEGER;
+  FUNCTION Max(arr: ARRAY OF REAL): REAL;
+    VAR
+      i: INTEGER;
+      maxValue: REAL;
   BEGIN (* Max *)
     maxValue := arr[0];
     FOR i := 1 TO length(arr) - 1 DO BEGIN
@@ -37,6 +39,20 @@ IMPLEMENTATION
     END; (* FOR *)
     Max := maxValue;
   END; (* Max *)
+
+  FUNCTION Min(arr: ARRAY OF REAL): REAL;
+    VAR
+      i: INTEGER;
+      minValue: REAL;
+  BEGIN (* Min *)
+    minValue := arr[0];
+    FOR i := 1 TO length(arr) - 1 DO BEGIN
+      IF (arr[i] < minValue) THEN BEGIN
+        minValue := arr[i];
+      END; (* IF *)
+    END; (* FOR *)
+    Min := minValue;
+  END; (* Min *)
 
 BEGIN (* mathUtils *)
   

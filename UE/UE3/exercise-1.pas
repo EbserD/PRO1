@@ -8,7 +8,7 @@ PROGRAM ExerciseOne;
     mathUtils, Crt;
   VAR
     countOfValues, i: INTEGER;
-    values: ARRAY OF INTEGER;
+    values: ARRAY OF REAL;
 BEGIN (* ExerciseOne *)
   Write('Enter number of Values to compare: ');
   Read(countOfValues);
