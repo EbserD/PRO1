@@ -7,10 +7,10 @@
             "label": "Compile Pascal",
             "type": "process",
             "command": "fpc",
-            "args": [ "-Mtp", "-Criot", "-gl", "-gh", "-Fu${workspaceFolder}", "-Fu${workspaceFolder}/UE", "${file}" ],
+            "args": [ "-Mtp", "-Criot", "-gl", "-gh", "-Fu${workspaceFolder}", "-Fu${workspaceFolder}/utils", "${file}" ],
             "windows": {
                 "command": "fpc.exe",
-                "args": [ "-Mtp", "-Criot", "-gl", "-gh", "-Fu${workspaceFolder}", "-Fu${workspaceFolder}\\UE", "${file}" ]
+                "args": [ "-Mtp", "-Criot", "-gl", "-gh", "-Fu${workspaceFolder}", "-Fu${workspaceFolder}\\utils", "${file}" ]
             },
             "group": {
                 "kind": "build",
@@ -57,7 +57,7 @@
                 "echo": true,
                 "showReuseMessage": false,
                 "panel": "dedicated",
-                "clear": true
+                "clear": false
             }
         }
     ]
