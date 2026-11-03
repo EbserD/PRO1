@@ -5,7 +5,7 @@
 
 PROGRAM ExerciseOne;
   USES
-    mathUtils, Crt;
+    MathUtils, Crt;
   VAR
     countOfValues, i: INTEGER;
     values: ARRAY OF REAL;
@@ -17,7 +17,6 @@ BEGIN (* ExerciseOne *)
   FOR i := 0 TO countOfValues - 1 DO BEGIN
     Write('Value - ', i+1, ': ');
     Read(values[i]);
-    
   END; (* FOR *)
 
   TextColor(Green);
