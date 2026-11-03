@@ -10,7 +10,7 @@ INTERFACE
 
   FUNCTION Binomial(x, y: INTEGER): LONGINT;
   FUNCTION Factorial(x: INTEGER): REAL;
-  FUNCTION isArmstrongNumber(x: INTEGER): BOOLEAN;
+  FUNCTION IsArmstrongNumber(x: INTEGER): BOOLEAN;
   FUNCTION Max(arr: ARRAY OF INTEGER): INTEGER OVERLOAD;
   FUNCTION Max(arr: ARRAY OF REAL): REAL OVERLOAD;
   FUNCTION Median(arr: Array OF INTEGER): INTEGER OVERLOAD;
@@ -37,12 +37,12 @@ IMPLEMENTATION
     Factorial := res;
   END; (* Factorial *)
 
-  FUNCTION isArmstrongNumber(x: INTEGER): BOOLEAN;
+  FUNCTION IsArmstrongNumber(x: INTEGER): BOOLEAN;
     VAR
       i: INTEGER;
       digits: ARRAY OF INTEGER;
       calculatedValue: EXTENDED;
-  BEGIN (* isArmstrongNumber *)
+  BEGIN (* IsArmstrongNumber *)
       digits := IntToDigits(x);
 
       calculatedValue := 0;
@@ -51,8 +51,8 @@ IMPLEMENTATION
         // calculatedValue := calculatedValue + Power(digits[i], length(digits))
       END; (* FOR *)      
       
-      isArmstrongNumber := x = calculatedValue;
-  END; (* isArmstrongNumber *)
+      IsArmstrongNumber := x = calculatedValue;
+  END; (* IsArmstrongNumber *)
 
   FUNCTION Max(arr: ARRAY OF INTEGER): INTEGER;
     VAR

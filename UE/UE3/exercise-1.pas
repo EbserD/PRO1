@@ -15,7 +15,7 @@ BEGIN (* ExerciseOne *)
   setlength(values, countOfValues);
 
   FOR i := 0 TO countOfValues - 1 DO BEGIN
-    Write('Value - ', i+1, ': ');
+    Write('Value - ', i + 1, ': ');
     Read(values[i]);
   END; (* FOR *)
 

@@ -13,5 +13,5 @@ BEGIN (* ExerciseFour *)
   Read(input);
 
   TextColor(Green);
-  WriteLn('Is armstrong number: ', isArmstrongNumber(input));
+  WriteLn('Is armstrong number: ', IsArmstrongNumber(input));
 END. (* ExerciseFour *)
