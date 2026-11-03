@@ -5,7 +5,7 @@
 
 PROGRAM ExerciseOne;
   USES
-    MathUtils, Crt;
+    Crt, MathUtils;
   VAR
     countOfValues, i: INTEGER;
     values: ARRAY OF REAL;

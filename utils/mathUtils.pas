@@ -1,21 +1,22 @@
-(* Title: MathUtils                                  Ebser/Koidl, 2026-10-29 *)
+(* Title: MathUtils                                        Ebser, 2026-10-29 *)
 (* ------                                                                    *)
 (* Utility functions for mathematical operations                             *)
 (* ========================================================================= *)
 
 UNIT MathUtils;
-
 INTERFACE
-  
+  USES
+    IntegerUtils, Math;
+
   FUNCTION Binomial(x, y: INTEGER): LONGINT;
   FUNCTION Factorial(x: INTEGER): REAL;
+  FUNCTION isArmstrongNumber(x: INTEGER): BOOLEAN;
   FUNCTION Max(arr: ARRAY OF INTEGER): INTEGER OVERLOAD;
   FUNCTION Max(arr: ARRAY OF REAL): REAL OVERLOAD;
   FUNCTION Median(arr: Array OF INTEGER): INTEGER OVERLOAD;
-  // FUNCTION Median(arr: Array OF REAL): REAL OVERLOAD;
+  FUNCTION Median(arr: Array OF REAL): REAL OVERLOAD;
   FUNCTION Min(arr: ARRAY OF INTEGER): INTEGER OVERLOAD;
   FUNCTION Min(arr: ARRAY OF REAL): REAL OVERLOAD;
-
 
 IMPLEMENTATION
 
@@ -35,6 +36,22 @@ IMPLEMENTATION
     END; (* FOR *)
     Factorial := res;
   END; (* Factorial *)
+
+  FUNCTION isArmstrongNumber(x: INTEGER): BOOLEAN;
+    VAR
+      i: INTEGER;
+      digits: ARRAY OF INTEGER;
+      calculatedValue: EXTENDED;
+  BEGIN (* isArmstrongNumber *)
+      digits := IntToDigits(x);
+
+      calculatedValue := 0;
+      FOR i := 0 TO length(digits) - 1 DO BEGIN
+        calculatedValue := calculatedValue + Power(digits[i], length(digits))
+      END; (* FOR *)      
+      
+      isArmstrongNumber := x = calculatedValue;
+  END; (* isArmstrongNumber *)
 
   FUNCTION Max(arr: ARRAY OF INTEGER): INTEGER;
     VAR

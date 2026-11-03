@@ -1,3 +1,8 @@
+(* Title: Exercise 2                                       Ebser, 2026-10-29 *)
+(* ------                                                                    *)
+(* Median Calculation                                                        *)
+(* ========================================================================= *)
+
 PROGRAM ExerciseTwo;
   USES
     ArrayUtils, Crt, MathUtils;
