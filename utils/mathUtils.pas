@@ -77,7 +77,7 @@ IMPLEMENTATION
 
   FUNCTION Median(arr: ARRAY OF REAL): REAL;
     VAR
-      res: INTEGER;
+      res: REAL;
   BEGIN (* Median *)
     IF (length(arr) MOD 2 = 0) THEN BEGIN
       res := (arr[(length(arr) div 2) - 1] + arr[length(arr) div 2]) / 2
