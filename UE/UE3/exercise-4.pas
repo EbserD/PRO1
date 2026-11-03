@@ -6,10 +6,8 @@
 PROGRAM ExerciseFour;
   USES
     Crt, MathUtils;
-  
   VAR
-    i, input: INTEGER;
-    digits: ARRAY OF INTEGER;
+    input: INTEGER;
 BEGIN (* ExerciseFour *)
   Write ('Enter value: ');
   Read(input);

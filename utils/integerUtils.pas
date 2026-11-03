@@ -6,8 +6,6 @@
 UNIT IntegerUtils;
 
 INTERFACE
-  USES
-    Math;
   TYPE
     IntArray = ARRAY OF INTEGER;
 

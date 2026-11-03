@@ -6,7 +6,7 @@
 UNIT MathUtils;
 INTERFACE
   USES
-    IntegerUtils, Math;
+    IntegerUtils;
 
   FUNCTION Binomial(x, y: INTEGER): LONGINT;
   FUNCTION Factorial(x: INTEGER): REAL;
@@ -47,7 +47,8 @@ IMPLEMENTATION
 
       calculatedValue := 0;
       FOR i := 0 TO length(digits) - 1 DO BEGIN
-        calculatedValue := calculatedValue + Power(digits[i], length(digits))
+        calculatedValue := calculatedValue + Exp(length(digits)*Ln(digits[i]))
+        // calculatedValue := calculatedValue + Power(digits[i], length(digits))
       END; (* FOR *)      
       
       isArmstrongNumber := x = calculatedValue;
