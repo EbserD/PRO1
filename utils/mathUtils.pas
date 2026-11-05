@@ -48,7 +48,6 @@ IMPLEMENTATION
       calculatedValue := 0;
       FOR i := 0 TO length(digits) - 1 DO BEGIN
         calculatedValue := calculatedValue + Exp(length(digits)*Ln(digits[i]))
-        // calculatedValue := calculatedValue + Power(digits[i], length(digits))
       END; (* FOR *)      
       
       IsArmstrongNumber := x = calculatedValue;
