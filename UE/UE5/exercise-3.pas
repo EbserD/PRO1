@@ -1,4 +1,4 @@
-PROGRAM ExerciseOne;
+PROGRAM ExerciseThree;
   USES
     Crt;
 
@@ -19,7 +19,7 @@ PROGRAM ExerciseOne;
     queryChar: CHAR;
     inputString: STRING;
 
-BEGIN (* ExerciseOne *)
+BEGIN (* ExerciseThree *)
   Write('Enter some string text: ');
   ReadLn(inputString);
 
@@ -29,4 +29,4 @@ BEGIN (* ExerciseOne *)
   TextColor(Green);
   WriteLn('String "', queryChar, '" was found ', AmountOfChar(inputString, queryChar), ' times!');
 
-END. (* ExerciseOne *)
+END. (* ExerciseThree *)

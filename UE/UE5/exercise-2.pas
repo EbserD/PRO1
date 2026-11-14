@@ -1,4 +1,4 @@
-PROGRAM ExerciseOne;
+PROGRAM ExerciseTwo;
   USES
     Crt;
   
@@ -26,7 +26,7 @@ PROGRAM ExerciseOne;
     dataCount, i: INTEGER;
     queryChar: CHAR;
 
-BEGIN (* ExerciseOne *)
+BEGIN (* ExerciseTwo *)
   dataCount := 0;
 
   REPEAT
@@ -49,4 +49,4 @@ BEGIN (* ExerciseOne *)
   TextColor(Green);
   WriteLn('Letter "', queryChar, '" was found ', AmountOfChar(data, dataCount, queryChar), ' times!');
 
-END. (* ExerciseOne *)
+END. (* ExerciseTwo *)
