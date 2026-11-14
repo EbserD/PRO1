@@ -33,7 +33,7 @@ BEGIN (* OrdinalDataTypes *)
   WriteLn('Succ(day) = ', Succ(day));
   WriteLn('High(day) = ', High(day));
   WriteLn('Low(day)  = ', Low(day));
-  WriteLn('Ord(day)  = ', Ord(chr));
+  WriteLn('Ord(day)  = ', Ord(day));
   WriteLn;
 
 END. (* OrdinalDataTypes *)
