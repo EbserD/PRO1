@@ -55,7 +55,7 @@ BEGIN (* ExerciseOne *)
 
     Write('Enter the amount of Datasets: ');
     Read(dataCount);
-  UNTIL (dataCount < MAX_ARRAY_LENGTH); (* REPEAT *)
+  UNTIL ((dataCount < MAX_ARRAY_LENGTH) AND (dataCount > 0)); (* REPEAT *)
 
   FOR i := 0 TO dataCount - 1 DO BEGIN
     Write('Enter Value - ', i + 1, ': ');
